@@ -1,0 +1,6 @@
+PolicyNumber: 12
+PolicyName: jeevan
+PolicyHolderName: ayyappan k
+Premium: 1500
+PolicyType: monthly
+

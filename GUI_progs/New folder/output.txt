@@ -1,0 +1,6 @@
+Policy Number: 12
+Policy Name: abc
+Policy Holder Name: kavi
+Premium: annual
+Policy Type: yes
+

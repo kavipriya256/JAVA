@@ -1,0 +1,9 @@
+ TO set panel size:
+      -p.setPreferredSize(new Dimension(200,200));
+	  -can be applied only to border/flow layout
+	  -grid layout allocates equal space for all panels and thus
+	    results in overriding of our setPreferredSize method
+TO set color to font:
+      - JLabel l=new JLabel();
+	    l.setForeground(Color.red); 
+	  -similarly color can be applied to textarea,textfield etc.

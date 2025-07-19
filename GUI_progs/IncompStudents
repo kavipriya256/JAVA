@@ -1,0 +1,47 @@
+/* Create an interface Dept containing two abstract methods getSchoolName() and getSchoolHead() for 
+printing the attributes dept_name and dept_head. Also keep a default method getCollegeName() to print 
+the college name as “Deemed University”.  
+Create a class hostel by implementing Dept interface and containing two protected string instance 
+variables hostelName, hostelLocation and a default integer instance variable numberOfRooms. The 
+hostel class contains three methods getHostelName(), getHostelLocation() and getNoOfRooms() for 
+printing the  instance variables. Also, implement the abstract methods of the Dept interface and override 
+the default method getCollegeName() to print the college name as “SASTRA”. 
+Raise “InvalidDataException” if the numberOfRooms is negative. 
+Then write a Students class by extending the Hostel class and implement the Dept interface. This class 
+contains string instance variables studentName, regNo, electiveSubject and a double instance variable 
+avgMarks. Write addStudent() method to get the input for all variables. Also, override methods of the 
+Dept interface. Write another method Sliding (), to get the details of students along with the department 
+details to which the student has slided and Write suitable printData() method to print the details for this 
+class (use super keyword in the suitable place to print the details of college from both hostel class and 
+from the default method specified in the interface) 
+Create an TreeSet to store the details of the students and implements comparable interface to sort the 
+students’ objects based on regno. 
+Create a GUI to admit new students, migrate a student. Additionally, add moving banner from left to right 
+to display welcome message using threading */
+
+interface Dept
+{
+	abstract void getSchoolName();
+	abstract void getSchoolHead();
+	void getCollegeName()
+	{
+		System.out.println("Deemed University");
+	}
+}
+class Hostel implements Dept 
+{
+	protected String hName,hLoc;
+	int roomsNo;
+	void getHostelName()
+	{
+		
+	}
+	void getHostelLocation()
+	{
+		
+	}
+	void getNoOfRooms()
+	{
+		
+	}
+}

@@ -1,0 +1,127 @@
+/* import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+class keydemo extends JFrame implements KeyListener
+{
+String msg="";
+int x,y;
+keydemo()
+{
+setVisible(true);
+setLayout(new GridLayout(1,2));
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setSize(300,500);
+setTitle("KeyFRAME");
+addKeyListener(this);
+}
+public void keyPressed(KeyEvent ke)
+{
+switch(ke.getKeyCode())
+{
+case KeyEvent.VK_CONTROL:
+msg="PRESSED CONTROL KEY";
+break;
+case KeyEvent.VK_F1:
+msg="PRESSED F1";
+break;
+case KeyEvent.VK_LEFT:
+msg="PRESSED LEFT ARROW KEY";
+break;
+case KeyEvent.VK_RIGHT:
+msg="PRESSED RIGHT ARROW KEY";
+break;
+}
+x=100;
+y=100;
+repaint();
+}
+public void keyReleased(KeyEvent ke)
+{
+msg="KEY RELEASED";
+x=100;
+y=100;
+repaint();
+}
+public void keyTyped(KeyEvent ke)
+{
+msg="KEY TYPED"+ke.getKeyChar();
+x=400;
+y=400;
+repaint();
+}
+public void paint(Graphics g)
+{
+g.drawString(msg,x,y);
+}
+public static void main(String args[])
+{
+new keydemo();
+}
+}
+*/
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class keydemo extends JFrame implements KeyListener {
+    String msg = "";
+    int x, y;
+
+    keydemo() {
+        setLayout(new BorderLayout());  // Adjusting layout
+        setSize(300, 500);
+        setTitle("KeyFRAME");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+
+        addKeyListener(this);
+        // Request focus to ensure key events are captured
+        setFocusable(true);
+        requestFocusInWindow();
+    }
+
+    public void keyPressed(KeyEvent ke) {
+        switch (ke.getKeyCode()) {
+            case KeyEvent.VK_CONTROL:
+                msg = "PRESSED CONTROL KEY";
+                break;
+            case KeyEvent.VK_F1:
+                msg = "PRESSED F1";
+                break;
+            case KeyEvent.VK_LEFT:
+                msg = "PRESSED LEFT ARROW KEY";
+                break;
+            case KeyEvent.VK_RIGHT:
+                msg = "PRESSED RIGHT ARROW KEY";
+                break;
+        }
+        x = 100;
+        y = 100;
+        repaint();
+    }
+
+    public void keyReleased(KeyEvent ke) {
+        msg = "KEY RELEASED";
+        x = 100;
+        y = 100;
+        repaint();
+    }
+
+    public void keyTyped(KeyEvent ke) {
+        msg = "KEY TYPED: " + ke.getKeyChar();
+        x = 400;
+        y = 400;
+        repaint();
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);  // Ensure proper component drawing
+        g.drawString(msg, x, y);
+    }
+
+    public static void main(String[] args) {
+        new keydemo();
+    }
+}
+

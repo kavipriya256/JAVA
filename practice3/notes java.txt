@@ -1,0 +1,11 @@
+common features in collection:
+   efficient during run time and mem time
+   provide common methods for insertion and deletion
+   provive iteration over the entire collection
+   
+   
+arraylist vs treeset 
+     a:maintain order of ins, t:sort
+	 a:duplicate ele r allowed, t:dup not allowed 
+	 a:implemnets iterable, t:implement navigableset
+	 a:listiterator allowed,t:not allowed
